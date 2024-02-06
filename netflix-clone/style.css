@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(84, 84, 84);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url("assets/images/main-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heade::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha channel for transparency */
+  }
+
+nav {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav .logo img {
+    width: 10vmax;
+}
+
+.select-lang {
+    font-size: 17px;
+    padding: 5px;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.small-button {
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: red;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    margin: 12px 0px;
+}
+
+.content p {
+    font-size: 1.7rem;
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 10px 0px;
+    font-weight: 500;
+}
+
+.fields {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.content .fields input {
+    flex-basis: 50%;
+    padding: 1rem;
+    line-height: 1.5;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.342);
+    border: 0.5px solid white;
+    color: white;
+    border-radius: 5px;
+}
+
+.content .large-button {
+    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    background-color: red;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+section {
+    background-color: black;
+    margin: 8px 0px;
+
+}
+
+section>div,
+footer>div {
+    width: 85%;
+    padding: 60px 0px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section>div img {
+    width: 40vmax;
+}
+
+section>div .head {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    font-weight: 900;
+}
+
+section>div .desc {
+    font-size: 1.4rem;
+}
+
+.section5>div {
+    padding: 60px 0px;
+    flex-direction: column;
+}
+
+.section5>div .head {
+    text-align: center;
+}
+
+.section5>div ul {
+    width: 88%;
+    margin-bottom: 10px;
+}
+
+.section5>div ul li {
+    list-style: none;
+    font-size: 1.4rem;
+    background-color: rgb(43, 43, 43);
+    margin: 10px 0px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+section>div ul li:hover{
+    background-color: rgb(70, 70, 70);
+}
+
+section>div ul li span {
+    font-size: 2rem;
+}
+
+footer {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer>div {
+    width: 80%;
+    flex-direction: column;
+    align-items: start;
+}
+
+footer>div>div {
+    margin: 10px 0px;
+}
+
+footer .links {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 7vmax;
+}
+
+footer .links div {
+    display: flex;
+    column-gap: 7vmax;
+}
+
+footer .links li {
+    list-style: none;
+    margin: 15px 0px;
+}
+
+@media screen and (max-width : 768px) {
+    nav{
+        width: 90%;
+    }
+    nav .logo img {
+        width: 6rem;
+    }
+    .small-button,.select-lang{
+        font-size: 16px;
+    }
+    .content .fields input{
+        flex-basis: unset;
+        width: 80%;
+    }
+    .content .large-button {
+        font-size: 1.2rem;
+        padding: 0.8rem 0.8rem;
+    }
+    section>div {
+        flex-direction: column;
+    }
+
+    section>div .head {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    section>div .desc {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    footer .links div {
+        display: unset;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+    
+    .content p {
+        font-size: 1.2rem;
+    }
+    
+    .content h3 {
+        font-size: 1rem;
+    }
+    .section5>div ul li {
+        font-size: 1.1rem;
+    }
+}
